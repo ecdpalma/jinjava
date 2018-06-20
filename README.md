@@ -11,28 +11,17 @@ Java-based template engine based on django template syntax, adapted to render ji
 
 *Note*: Requires Java >= 8. Originally forked from [jangod](https://code.google.com/p/jangod/).
 
+
+Fork justification
+------------------
+
+I wanted this to work in Android.
+
+
 Get it:
 -------
 
-```xml
-  <dependency>
-    <groupId>com.hubspot.jinjava</groupId>
-    <artifactId>jinjava</artifactId>
-    <version>{ LATEST_VERSION }</version>
-  </dependency>
-```
-
-where LATEST_VERSION is the [latest version from CHANGES](CHANGES.md).
-
-or if you're stuck on java 7:
-```xml
-  <dependency>
-    <groupId>com.hubspot.jinjava</groupId>
-    <artifactId>jinjava</artifactId>
-    <version>2.0.11-java7</version>
-</dependency>
-```
-
+You'll have to build it yourself. Also, the JUEL dependency (ecdpalma/juel) needs to be rebuilt and jars placed in local maven (or somewhere else).
 
 Example usage:
 --------------
