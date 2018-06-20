@@ -2,10 +2,10 @@ package com.hubspot.jinjava.lib.filter;
 
 import static com.hubspot.jinjava.util.Logging.ENGINE_LOG;
 
-import java.beans.BeanInfo;
-import java.beans.IntrospectionException;
-import java.beans.Introspector;
-import java.beans.PropertyDescriptor;
+import org.mini2Dx.android.beans.BeanInfo;
+import org.mini2Dx.android.beans.IntrospectionException;
+import org.mini2Dx.android.beans.Introspector;
+import org.mini2Dx.android.beans.PropertyDescriptor;
 import java.lang.reflect.Method;
 import java.util.LinkedList;
 import java.util.List;

@@ -14,9 +14,6 @@
  * limitations under the License.
  **********************************************************************/
 package com.hubspot.jinjava.lib.tag;
-
-import java.beans.Introspector;
-import java.beans.PropertyDescriptor;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -37,6 +34,8 @@ import com.hubspot.jinjava.util.ForLoop;
 import com.hubspot.jinjava.util.HelperStringTokenizer;
 import com.hubspot.jinjava.util.LengthLimitingStringBuilder;
 import com.hubspot.jinjava.util.ObjectIterator;
+import org.mini2Dx.android.beans.Introspector;
+import org.mini2Dx.android.beans.PropertyDescriptor;
 
 /**
  * {% for a in b|f1:d,c %}
