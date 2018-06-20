@@ -162,13 +162,16 @@
               <goal>shade</goal>
             </goals>
             <configuration>
+              <shadeTestJar>false</shadeTestJar>
               <createDependencyReducedPom>true</createDependencyReducedPom>
-              <shadedArtifactAttached>false</shadedArtifactAttached>
-              <artifactSet>
-                <includes>
-                  <include>de.odysseus.juel:juel-api</include>
-                  <include>de.odysseus.juel:juel-impl</include>
-                </includes>
+	      <artifactSet>
+                <excludes>
+                  <exclude>com.google.code.findbugs:annotations</exclude>
+                  <exclude>com.google.guava:guava</exclude>
+                  <exclude>com.google.errorprone:error_prone_annotations</exclude>
+                  <exclude>com.google.j2objc:*</exclude>
+                  <exclude>*:animal-sniffer-annotations</exclude>
+                </excludes>
               </artifactSet>
               <relocations>
                 <relocation>
