@@ -36,6 +36,6 @@ public class WordCountFilter implements Filter {
     return Integer.valueOf(count);
   }
 
-  private static final Pattern WORD_RE = Pattern.compile("\\w+", Pattern.UNICODE_CHARACTER_CLASS | Pattern.MULTILINE);
+  private static final Pattern WORD_RE = Pattern.compile("\\w+", Pattern.MULTILINE);
 
 }
