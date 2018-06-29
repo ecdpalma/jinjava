@@ -2,7 +2,7 @@ package com.hubspot.jinjava.benchmarks.liquid;
 
 import static org.apache.commons.lang3.math.NumberUtils.toDouble;
 
-import java.time.ZonedDateTime;
+import org.threeten.bp.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Objects;

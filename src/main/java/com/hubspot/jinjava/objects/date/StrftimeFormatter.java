@@ -1,8 +1,8 @@
 package com.hubspot.jinjava.objects.date;
 
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
+import org.threeten.bp.ZonedDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
+import org.threeten.bp.format.FormatStyle;
 import java.util.Locale;
 
 import org.apache.commons.lang3.StringUtils;

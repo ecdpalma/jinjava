@@ -2,8 +2,8 @@ package com.hubspot.jinjava.benchmarks.jinja2;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
+import org.threeten.bp.LocalDateTime;
+import org.threeten.bp.ZoneOffset;
 import java.util.Date;
 
 import de.svenjacobs.loremipsum.LoremIpsum;

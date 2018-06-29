@@ -1,6 +1,6 @@
 package com.hubspot.jinjava.lib.fn;
 
-import java.time.ZonedDateTime;
+import org.threeten.bp.ZonedDateTime;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;

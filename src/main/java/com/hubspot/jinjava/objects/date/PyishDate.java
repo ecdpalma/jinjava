@@ -4,10 +4,12 @@ import com.hubspot.jinjava.objects.PyWrapper;
 import org.apache.commons.lang3.math.NumberUtils;
 
 import java.io.Serializable;
-import java.time.Instant;
-import java.time.ZoneOffset;
-import java.time.ZonedDateTime;
-import java.time.temporal.ChronoField;
+
+import org.threeten.bp.DateTimeUtils;
+import org.threeten.bp.Instant;
+import org.threeten.bp.ZoneOffset;
+import org.threeten.bp.ZonedDateTime;
+import org.threeten.bp.temporal.ChronoField;
 import java.util.Date;
 import java.util.Objects;
 import java.util.Optional;
@@ -29,7 +31,7 @@ public final class PyishDate extends Date implements Serializable, PyWrapper {
   }
 
   public PyishDate(Date d) {
-    this(ZonedDateTime.ofInstant(d.toInstant(), ZoneOffset.UTC));
+    this(ZonedDateTime.ofInstant(DateTimeUtils.toInstant(d), ZoneOffset.UTC));
   }
 
   public PyishDate(String publishDateStr) {
@@ -88,7 +90,7 @@ public final class PyishDate extends Date implements Serializable, PyWrapper {
   }
 
   public Date toDate() {
-    return Date.from(date.toInstant());
+    return DateTimeUtils.toDate(date.toInstant());
   }
 
   public ZonedDateTime toDateTime() {

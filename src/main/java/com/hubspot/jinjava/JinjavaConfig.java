@@ -17,8 +17,8 @@ package com.hubspot.jinjava;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.time.ZoneId;
-import java.time.ZoneOffset;
+import org.threeten.bp.ZoneId;
+import org.threeten.bp.ZoneOffset;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;

@@ -2,7 +2,7 @@ package com.hubspot.jinjava.lib.filter;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.time.ZonedDateTime;
+import org.threeten.bp.ZonedDateTime;
 
 import org.junit.After;
 import org.junit.Before;

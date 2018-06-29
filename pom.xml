@@ -104,6 +104,10 @@
       <groupId>org.mini2Dx</groupId>
       <artifactId>android-beans</artifactId>
     </dependency>
+    <dependency>
+      <groupId>org.threeten</groupId>
+      <artifactId>threetenbp</artifactId>
+    </dependency>
 
   </dependencies>
 
@@ -128,6 +132,11 @@
         <groupId>org.mini2Dx</groupId>
         <artifactId>android-beans</artifactId>
         <version>1.0.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.threeten</groupId>
+        <artifactId>threetenbp</artifactId>
+        <version>1.3.6</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -168,6 +177,7 @@
                 <excludes>
                   <exclude>com.google.code.findbugs:annotations</exclude>
                   <exclude>com.google.guava:guava</exclude>
+                  <exclude>org.threeten:threetenbp</exclude>
                   <exclude>com.google.errorprone:error_prone_annotations</exclude>
                   <exclude>com.google.j2objc:*</exclude>
                   <exclude>*:animal-sniffer-annotations</exclude>

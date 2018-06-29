@@ -3,7 +3,7 @@ package com.hubspot.jinjava.lib.filter;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.nio.charset.StandardCharsets;
-import java.time.ZoneOffset;
+import org.threeten.bp.ZoneOffset;
 import java.util.Locale;
 
 import org.apache.commons.lang3.math.NumberUtils;
