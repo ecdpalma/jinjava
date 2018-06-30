@@ -455,14 +455,22 @@ public class JinjavaInterpreter {
     return errors;
   }
 
-  private static final ThreadLocal<Stack<JinjavaInterpreter>> CURRENT_INTERPRETER = ThreadLocal.withInitial(Stack::new);
+  private static final ThreadLocal<Stack<JinjavaInterpreter>> CURRENT_INTERPRETER = new ThreadLocal<>();
+
+  public static Stack<JinjavaInterpreter> getInterpreterThread() {
+    if (CURRENT_INTERPRETER.get() == null) {
+      CURRENT_INTERPRETER.set(new Stack<>());
+    }
+
+    return CURRENT_INTERPRETER.get();
+  }
 
   public static JinjavaInterpreter getCurrent() {
-    if (CURRENT_INTERPRETER.get().isEmpty()) {
+    if (getInterpreterThread().isEmpty()) {
       return null;
     }
 
-    return CURRENT_INTERPRETER.get().peek();
+    return getInterpreterThread().peek();
   }
 
   public static Optional<JinjavaInterpreter> getCurrentMaybe() {
@@ -470,12 +478,12 @@ public class JinjavaInterpreter {
   }
 
   public static void pushCurrent(JinjavaInterpreter interpreter) {
-    CURRENT_INTERPRETER.get().push(interpreter);
+    getInterpreterThread().push(interpreter);
   }
 
   public static void popCurrent() {
-    if (!CURRENT_INTERPRETER.get().isEmpty()) {
-      CURRENT_INTERPRETER.get().pop();
+    if (!getInterpreterThread().isEmpty()) {
+      getInterpreterThread().pop();
     }
   }
 
